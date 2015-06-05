@@ -10,6 +10,7 @@ angular
             [
                 '$scope',
                 function ($scope) {
+                    $scope.nazwaAplikacji = "Dziad wsiadł";
                     $scope.powitanie = "Cześć Jarosławie!"
                 }
             ]

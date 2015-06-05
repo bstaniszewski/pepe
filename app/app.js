@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- *
+ * Inicjalizacja aplikacji
  */
 
 var appModule =
@@ -21,6 +21,13 @@ var appModule =
             [
                 '$rootScope',
                 function ($rootScope) {
+					/*
+						Tu podłączenie do zdarzenie onChangeState i wpięcie modułu kontroli uprawnień.
+						Pobierz role zalogowanego użytkownika i role wymagane w konfiguracji modułu.
+						Jeżeli użytkownik jest uprawniony - załaduj moduł, jeżeli nie przekieruj do 'Do widzenia ...'
+					 */
+					
+					$rootScope.powitanie = "Powitanie";
                     $rootScope.nazwaAplikacji = "Pepe";
                 }
             ]

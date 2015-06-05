@@ -6,19 +6,24 @@
         <link rel="stylesheet" href="styles/pp-layout.css">
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     </head>
-    <body >
+    <body ng-app="pepeApp">
         <h1>Tu binding nie powinien zadziałać: {{nazwaAplikacji}}</h1>
         
         <!-- Od tego węzła zaczyna się wiązanie z naszą aplikacją - tu pojawia się $scope ($rootScope) -->
-        <section ng-app="pepeApp">
+        <section>
             <h1>A tu binding powinien zadziałać: {{nazwaAplikacji}}</h1>
+            
+            <!-- Kontroler dla widoku ... -->
             <div ng-controller="AppController">
-                <h2>Tu poziom kontrolera aplikacji: {{powitanie}}</h2>
+                <h2>Tu poziom kontrolera aplikacji: {{powitanie}}, {{nazwaAplikacji}}</h2>
             </div>
+            
             <ul>
                 <li><a ui-sref="documents">Dokumenty</a></li>
                 <li><a ui-sref="help">Pomoc</a></li>
+                <li><a ui-sref="info">Info</a></li>
             </ul>
+            
             <div class="pp-content" ui-view></div>
         </section>
                  

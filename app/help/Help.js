@@ -9,11 +9,21 @@ angular
                     'help',
                     {
                         controller: function($scope) {
-                        
+                            $scope.tresc = "Tu opis co i jak ... z kontrolera";
                         }, 
-                        template: '<div>Tu opis co i jak ...</div>',
+                        template: '<div>{{tresc}}</div>',
                         url: '/help'
                     }
-                );
+                )
+                .state(
+                    'info',
+                    {
+                        controller: function($scope) {
+                            $scope.tresc = "Info";
+                        }, 
+                        template: '<div>{{tresc}}</div>',
+                        url: '/info'
+                    }
+                )
         }
     );
