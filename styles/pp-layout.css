@@ -1,0 +1,45 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    color: #666666;
+    font-family: Arial, 'Open Sans Light', sans-serif;
+    font-size: 13px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+section {
+    position: absolute;
+}
+
+h1, h2, h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 1em;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.pp-content {
+    padding: 1em;
+}
+
+
+
+
+
