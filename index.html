@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Pepe</title>
+        <link rel="stylesheet" href="styles/pp-layout.css">
+        <link rel="stylesheet" href="styles/pp-app.css">
+        <link rel="stylesheet" href="styles/pp-forms.css">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    </head>
+    <body ng-app="pepeApp">
+        <section>
+            <div ng-controller="AppController">
+                <h2>Czas na formularze!</h2>
+            </div>
+            
+            <ul>
+                <li><a ui-sref="documents">Dokumenty</a></li>
+                <li><a ui-sref="document">Nowy dokument</a></li>
+            </ul>
+            
+            <div class="pp-content" ui-view></div>
+        </section>
+                 
+        <!-- Zależności zewnętrzne, którymi później będziemy zarządzać za pomocą Bowera -->
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-messages.js"></script>
+        
+        <!-- ui-router - mocny moduł do routingu zastępujący angularowy ng-router -->
+        <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    
+        <!-- Zależności wewnętrzne - o sposobie organizacji później -->
+        <script src="app/app.js"></script>
+               
+        <script src="app/AppController.js"></script>
+        <script src="app/documents/Documents.js"></script>
+        <script src="app/documents/DocumentController.js"></script>
+        <script src="app/documents/DocumentEditController.js"></script>
+        <script src="app/documents/DocumentsController.js"></script>
+        <script src="app/documents/DocumentsService.js"></script>
+        <script src="app/help/Help.js"></script>
+    </body>
+</html>
