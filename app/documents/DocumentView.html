@@ -1,0 +1,40 @@
+<form name="documentForm" novalidate>
+    <div class="pg-form-info" ng-show="documentForm.$invalid && documentForm.$submitted">
+        Sprawdź wprowadzone dane
+    </div>
+    
+    <div class="pg-form-row">
+        <label>Nazwa</label>
+        <input
+            type="text"
+            name="name"
+            ng-model="document.name"
+            ng-minlength="3"
+            ng-maxlength="256"
+            required/>
+        <!-- Blok komunikatów walidacyjnych, widoczny gdy pole zostało 'dotknięte' -->
+        <div
+            class="pg-errors"
+            ng-messages="documentForm.name.$error"
+            ng-messages-multiple
+            ng-show="documentForm.name.$touched">
+            <!-- Komunikaty walidacyjne-->
+            <span ng-message="required">Wprowadź nazwę dokumentu.</span>
+            <span ng-message-exp="['minlength', 'maxlength']">Nazwa powinna mieć od 3 do 256 znaków.</span>
+        </div>
+    </div>
+    
+    <div class="pg-form-row">
+        <label>Opis</label>
+        <input
+            type="text"
+            name="desc"
+            ng-model="document.desc"/>
+    </div>
+    
+    <div class="pg-form-row pg-form-actions">
+        <button ng-click="saveDocument(documentForm)">
+            Zapisz
+        </button>
+    </div>
+</form>

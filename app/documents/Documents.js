@@ -8,9 +8,25 @@ angular
                 .state(
                     'documents',
                     {
-                        controller: 'DocumentsController', 
+                        controller: 'DocumentsController',
                         templateUrl: 'app/documents/DocumentsView.html',
-                        url: '/'
+                        url: '/documents'
+                    }
+                )
+                .state(
+                    'editdocument',
+                    {
+                        controller: 'DocumentEditController',
+                        templateUrl: 'app/documents/DocumentEditView.html',
+                        url: '/editdocument/:index'
+                    }
+                )
+                .state(
+                    'document',
+                    {
+                        controller: 'DocumentController',
+                        templateUrl: 'app/documents/DocumentView.html',
+                        url: '/document'
                     }
                 );
         }

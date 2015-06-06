@@ -1,0 +1,124 @@
+.pg-errors {
+    float: left;
+        line-height: 25px;
+        padding: 0.2rem 1rem 0.2rem 1rem;
+}
+
+/**
+ *
+ *
+ */
+.pg-form-info {
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.pg-layout {
+    border: 1px solid #eaeaea;
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    width: 1000px;
+    margin: auto;
+    z-index: 0;
+}
+
+.pg-view {
+    position: absolute;
+    z-index: 1;
+}
+
+section {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1000px;
+}
+
+header {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-top: none;
+    height: 4rem;
+    line-height: 4rem;
+    margin-right: -500px;
+    position: fixed;
+    right: 50%;
+    width: 1000px;
+    z-index: 1000;
+}
+
+    header h1 {
+        float: left;
+        padding: 0 1rem;
+    }
+    
+    header .pg-actions {
+        float: right;
+        padding: 0 1rem;
+    }
+    
+        header .pg-actions a {
+            margin-left: 0.5rem;
+        }
+
+/**
+ *
+ */
+form,
+.pg-list {
+    float: left;
+    width: 1000px;
+}
+
+    .pg-list-item {
+        border-bottom: 1px solid #eaeaea;
+        clear: left;
+        cursor: pointer;
+        float: left;
+        line-height: 3rem;
+        padding: 0;
+        width: 100%;
+    }
+
+        .pg-list-item a {
+            display: block;
+            padding: 0 1rem;
+        }
+        
+        .pg-list-item a:hover {
+            background-color: #eaeaea;
+        }
+    
+    /**
+     *
+     */    
+    .pg-filter {
+        background-color: #ffffff;
+        border-right: 1px solid #eaeaea;
+        cursor: pointer;
+        height: 100%;
+        margin-right: -500px;
+        overflow: hidden;
+        position: fixed;
+        right: 50%;
+        top: 4rem;
+        transition: all 0.5s ease;
+        width: 0px;
+        z-index: 999;
+    }
+    
+    .pg-filter.pg-expanded {
+        width: 300px;
+    }
+    
+        .pg-filter-cnt {
+            border-left: 1px solid #eaeaea;
+            height: 100%;
+            padding: 1rem;
+            position: absolute;
+            left: 0px;
+            width: 300px;
+        }

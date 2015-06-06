@@ -1,9 +1,5 @@
-<ol>
-    <li ng-repeat="document in documents">{{document.name}} {{document.desc}}</li>
-</ol>
-
-<form>
-    <input type="text" ng-model="document.name"/> {{document.name}}
-</form>
-
-<span>Cokolwiek</span>
+<div class="pg-list">
+    <div class="pg-list-item" ng-repeat="document in documents">
+        <a ui-sref="editdocument({index: 1})">{{document.name}}</a>
+    </div>
+</div>

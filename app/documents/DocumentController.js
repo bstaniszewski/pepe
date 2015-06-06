@@ -3,12 +3,14 @@
 angular
     .module('pepeApp')
     .controller(
-        'DocumentsController',
+        'DocumentController',
         [
             '$scope',
             'DocumentsService',
             function ($scope, DocumentsService) {
-                $scope.documents = DocumentsService.getDocuments();
+                $scope.document = {};
+                
+                $scope.saveDocument = DocumentsService.addDocument($scope.document);
             }
         ]
     );

@@ -10,6 +10,7 @@ var appModule =
             'pepeApp',
             [
                 'ui.router',
+				'ngMessages'
             ]
         )
         .config(
